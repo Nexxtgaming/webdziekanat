@@ -1,13 +1,14 @@
 import React from 'react';
+import "./App.css";
+
 import AppBar from '@mui/material/AppBar';
 import Toolbar from '@mui/material/Toolbar';
-import IconButton from '@mui/material/IconButton';
-import HomeIcon from '@mui/icons-material/Home';
-import { createTheme, ThemeProvider } from '@mui/material/styles';
 import Typography from '@mui/material/Typography';
-import Login from "./components/login";
-import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { createTheme, ThemeProvider } from '@mui/material/styles';
+import { BrowserRouter, Routes, Route, Link } from "react-router-dom";
 import LoginPage from "./pages/LoginPage";
+import Login from "./components/login";
+import HomePage from "./pages/HomePage";
 
 const theme = createTheme({
   palette: {
@@ -19,13 +20,27 @@ const theme = createTheme({
 
 function App() {
   return (
-      <BrowserRouter>
-        <Routes>
-          <Route path="/" >
-            <Route path="login" element={<LoginPage />} />
-          </Route>
-        </Routes>
-      </BrowserRouter>
+      <ThemeProvider theme={theme}>
+          <div className="LoginPage" style={{textAlign: "center"}}>
+              <AppBar position="static" color="primary">
+                  <Toolbar>
+                      <Typography variant="h4" component="div" sx={{ flexGrow: 1 }} style={{textAlign: "left", cursor: "pointer"}}>
+                          <a href="/" style={{textDecoration: "none", color: "white"}}>Webdziekanat</a>
+                      </Typography>
+                      <a href="https://virtul.p.lodz.pl/virtul/" style={{textDecoration: "none", color: "white"}}><Typography variant="h6">VIRTUL</Typography></a>
+                      <Typography variant="h6" style={{marginLeft: "20px"}}><a href="http://poczta.p.lodz.pl/" style={{textDecoration: "none", color: "white"}}>E-MAIL</a></Typography>
+                      <Typography variant="h6" style={{marginLeft: "20px"}}><a href="http://edu.p.lodz.pl/" style={{textDecoration: "none", color: "white"}}>WIKAMP</a></Typography>
+                  </Toolbar>
+              </AppBar>
+              <BrowserRouter>
+                  <Routes>
+                      <Route path="/" element={<HomePage/>}/>
+                      <Route path="/login" element={<LoginPage />} />
+                  </Routes>
+              </BrowserRouter>
+          </div>
+      </ThemeProvider>
+
   );
 }
 
