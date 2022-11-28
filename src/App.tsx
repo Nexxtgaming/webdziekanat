@@ -1,12 +1,13 @@
 import React from 'react';
-import './App.css';
 import AppBar from '@mui/material/AppBar';
 import Toolbar from '@mui/material/Toolbar';
 import IconButton from '@mui/material/IconButton';
-import MenuIcon from '@mui/icons-material/Menu';
+import HomeIcon from '@mui/icons-material/Home';
 import { createTheme, ThemeProvider } from '@mui/material/styles';
 import Typography from '@mui/material/Typography';
 import Login from "./components/login";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+import LoginPage from "./pages/LoginPage";
 
 const theme = createTheme({
   palette: {
@@ -18,28 +19,13 @@ const theme = createTheme({
 
 function App() {
   return (
-      <ThemeProvider theme={theme}>
-        <div className="App">
-          <AppBar position="static" color="primary">
-            <Toolbar>
-              <IconButton
-                  size="large"
-                  edge="start"
-                  color="inherit"
-                  aria-label="menu"
-                  sx={{ mr: 2 }}
-              >
-                <MenuIcon />
-              </IconButton>
-              <Typography variant="h5" component="div" sx={{ flexGrow: 1 }}>
-                Webdziekanat
-              </Typography>
-            </Toolbar>
-          </AppBar>
-          <Login></Login>
-        </div>
-      </ThemeProvider>
-
+      <BrowserRouter>
+        <Routes>
+          <Route path="/" >
+            <Route path="login" element={<LoginPage />} />
+          </Route>
+        </Routes>
+      </BrowserRouter>
   );
 }
 
