@@ -10,9 +10,8 @@ import InputLabel from '@mui/material/InputLabel';
 import MenuItem from '@mui/material/MenuItem';
 import FormControl from '@mui/material/FormControl';
 import Select from '@mui/material/Select';
-import {useState } from 'react'
+import { useState } from 'react'
 import Alert from '@mui/material/Alert';
-import Stack from '@mui/material/Stack';
 
 type Row = {
     code: string;
@@ -50,11 +49,17 @@ const HomePage = () => {
 
     return (
         <div >
-            <Alert severity="warning" style={{width: "600px", marginLeft: "35%", marginTop: "50px"}}>Szanowni Państwo Uczelniane Centrum Informatyczne wraz z Centrum E-Learningu uruchomiło dla nauczycieli wprowadzanie ocen z WF bezpośrednio z platformy WIKAMP. W związku z tym wszelkie uwagi proszę kierować do nauczycieli, tym bardziej że mają oni podgląd na Państwa sytuację oraz na informację o powodzie nie przesłania oceny. Pozytywne przesłanie oceny powoduje to, że jest ona widoczna w WEBDziekanacie.</Alert>
+            <Alert severity="warning" style={{width: "600px", marginLeft: "32%", marginTop: "50px"}}>Szanowni Państwo
+                Uczelniane Centrum Informatyczne wraz z Centrum E-Learningu uruchomiło dla nauczycieli wprowadzanie ocen
+                z WF bezpośrednio z platformy WIKAMP. W związku z tym wszelkie uwagi proszę kierować do nauczycieli, tym
+                bardziej że mają oni podgląd na Państwa sytuację oraz na informację o powodzie nie przesłania oceny.
+                Pozytywne przesłanie oceny powoduje to, że jest ona widoczna w WEBDziekanacie.</Alert>
             <div style={{marginTop: "100px", display: "flex", marginLeft: "25%"}}>
-                <FormControl sx={{ m: 1, width: 150, marginTop: "10px" }} size="small" variant="filled">
+                <FormControl sx={{m: 1, width: 150, marginTop: "10px"}} size="small" variant="filled">
                     <InputLabel>Semester</InputLabel>
-                    <Select label="Age" value={selectedSemester} onChange={(event) => {handleSemesterChange(event.target.value as number)}}>
+                    <Select label="Age" value={selectedSemester} onChange={(event) => {
+                        handleSemesterChange(event.target.value as number)
+                    }}>
                         <MenuItem value={5}>2022/23 Z - 5</MenuItem>
                         <MenuItem value={4}>2021/22 L - 4</MenuItem>
                         <MenuItem value={3}>2021/22 Z - 3</MenuItem>
@@ -62,11 +67,12 @@ const HomePage = () => {
                         <MenuItem value={1}>2020/21 Z - 1</MenuItem>
                     </Select>
                 </FormControl>
-                <Typography variant="h6" style={{color: "#800000",  width: "150px", marginLeft: "250px"}}>Report Card</Typography>
+                <Typography variant="h6" style={{color: "#800000", width: "150px", marginLeft: "150px"}}>Report
+                    Card</Typography>
             </div>
             <Typography variant="body1">Average grade: 3.83 Acumulated Points: 30/30</Typography>
-            <TableContainer component={Paper} sx={{width: 1000}} style={{marginLeft: "25%", marginTop: "30px"}} >
-                <Table sx={{width: 1000}} aria-label="report table">
+            <TableContainer component={Paper} sx={{width: 900}} style={{marginLeft: "17%", marginTop: "30px"}}>
+                <Table sx={{width: 900}} aria-label="report table">
                     <TableHead>
                         <TableRow>
                             <TableCell align="right">Code</TableCell>
