@@ -10,6 +10,8 @@ import LoginPage from "./pages/LoginPage";
 import HomePage from "./pages/HomePage";
 import LeftNavbar from "./components/LeftNavbar";
 import GeneralPage from "./pages/GeneralPage";
+import CoursesPage from "./pages/CoursesPage";
+import FeesPage from "./pages/FeesPage";
 
 const theme = createTheme({
     palette: {
@@ -50,6 +52,9 @@ function App() {
                           <Route path="/" element={<HomePage/>}/>
                           <Route path="/login" element={<LoginPage/>}/>
                           <Route path="/general" element={<GeneralPage/>}/>
+                          <Route path="/courses" element={<CoursesPage/>}/>
+                          <Route path="/fees" element={<FeesPage/>}/>
+
                       </Routes>
                   </div>
 

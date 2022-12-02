@@ -9,16 +9,24 @@ const LeftNavbar = () => {
     return (
         <Paper sx={{width: 250, maxWidth: '100%'}}>
             <MenuList>
-                <MenuItem>
-                    <ListItemText><Link to="/general"
-                                        style={{textDecoration: "none", color: "black"}}>General</Link></ListItemText>
-                </MenuItem>
-                <MenuItem>
-                    <ListItemText>Courses</ListItemText>
-                </MenuItem>
-                <MenuItem>
-                    <ListItemText>Fees</ListItemText>
-                </MenuItem>
+                <Link to="/general"
+                      style={{textDecoration: "none", color: "black"}}>
+
+                    <MenuItem>
+                        <ListItemText>General</ListItemText>
+                    </MenuItem>
+                </Link>
+                <Link to="/courses" style={{textDecoration: "none", color: "black"}}>
+                    <MenuItem>
+                        <ListItemText>Courses</ListItemText>
+                    </MenuItem>
+                </Link>
+                <Link to="/fees" style={{textDecoration: "none", color: "black"}}>
+                    <MenuItem>
+                        <ListItemText>Fees</ListItemText>
+                    </MenuItem>
+                </Link>
+
                 <MenuItem>
                     <ListItemText>Applications</ListItemText>
                 </MenuItem>

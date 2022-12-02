@@ -6,12 +6,12 @@ import AverageCard from "../components/AverageCard";
 
 const GeneralPage = () => {
     return (
-        <div style={{marginTop: "200px", marginLeft: "24%"}}>
+        <div style={{marginTop: "200px", margin: "100px auto"}}>
             <GeneralCard/>
-            <div style={{marginTop: "50px"}}>
-                <DataValidCard />
+            <div style={{marginTop: "50px", margin: "50px auto"}}>
+                <DataValidCard/>
             </div>
-            <div style={{marginTop: "50px"}}>
+            <div style={{marginTop: "50px", margin: "50px auto"}}>
                 <AverageCard/>
             </div>
         </div>

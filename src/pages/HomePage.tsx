@@ -58,12 +58,18 @@ const HomePage = () => {
     }
 
     return (
-        <div >
-            <Alert severity="warning" style={{width: "600px", marginLeft: "35%", marginTop: "50px"}}>Szanowni Państwo Uczelniane Centrum Informatyczne wraz z Centrum E-Learningu uruchomiło dla nauczycieli wprowadzanie ocen z WF bezpośrednio z platformy WIKAMP. W związku z tym wszelkie uwagi proszę kierować do nauczycieli, tym bardziej że mają oni podgląd na Państwa sytuację oraz na informację o powodzie nie przesłania oceny. Pozytywne przesłanie oceny powoduje to, że jest ona widoczna w WEBDziekanacie.</Alert>
-            <div style={{marginTop: "100px", display: "flex", marginLeft: "25%"}}>
-                <FormControl sx={{ m: 1, width: 150, marginTop: "-5px" }} size="small" >
+        <div style={{margin: "0 auto"}}>
+            <Alert severity="warning" style={{width: "600px", margin: "50px auto", marginTop: "50px"}}>Szanowni Państwo
+                Uczelniane Centrum Informatyczne wraz z Centrum E-Learningu uruchomiło dla nauczycieli wprowadzanie ocen
+                z WF bezpośrednio z platformy WIKAMP. W związku z tym wszelkie uwagi proszę kierować do nauczycieli, tym
+                bardziej że mają oni podgląd na Państwa sytuację oraz na informację o powodzie nie przesłania oceny.
+                Pozytywne przesłanie oceny powoduje to, że jest ona widoczna w WEBDziekanacie.</Alert>
+            <div style={{marginTop: "100px", display: "flex", width: "600px", margin: "0 auto"}}>
+                <FormControl sx={{m: 1, width: 150, marginTop: "-5px", marginLeft: "-50px"}} size="small">
                     <InputLabel>Semester</InputLabel>
-                    <Select label="Age" value={selectedSemester} onChange={(event) => {handleSemesterChange(event.target.value as number)}}>
+                    <Select label="Age" value={selectedSemester} onChange={(event) => {
+                        handleSemesterChange(event.target.value as number)
+                    }}>
                         <MenuItem value={5}>2022/23 Z - 5</MenuItem>
                         <MenuItem value={4}>2021/22 L - 4</MenuItem>
                         <MenuItem value={3}>2021/22 Z - 3</MenuItem>
@@ -71,16 +77,21 @@ const HomePage = () => {
                         <MenuItem value={1}>2020/21 Z - 1</MenuItem>
                     </Select>
                 </FormControl>
-                <Typography variant="h6" style={{color: "#800000",  width: "150px", marginLeft: "250px"}}>Report Card</Typography>
+                <Typography variant="h6"
+                            style={{color: "#800000", width: "150px", margin: "0 auto", marginLeft: "100px"}}>Report
+                    Card</Typography>
             </div>
-            <div style={{display: "flex", marginLeft: "27%", marginTop: "30px"}}>
-                <Typography variant="body2" style={{width: "200px"}}>Average grade: {semesterInfo.averageGrade} </Typography>
-                <Typography variant="body2"style={{width: "200px"}}>Accumulated Points: {semesterInfo.accumulatedPoints}</Typography>
-                <Typography variant="body2"style={{width: "300px"}}>Examination card acceptance: {semesterInfo.examinationCardAcceptance}</Typography>
-                <Typography variant="body2"style={{width: "200px"}}>Record book on time: no</Typography>
+            <div style={{display: "flex", marginTop: "40px", width: "800px", margin: "0 auto"}}>
+                <Typography variant="body2" style={{width: "200px"}}>Average
+                    grade: {semesterInfo.averageGrade} </Typography>
+                <Typography variant="body2" style={{width: "260px"}}>Accumulated
+                    Points: {semesterInfo.accumulatedPoints}</Typography>
+                <Typography variant="body2" style={{width: "300px"}}>Examination card
+                    acceptance: {semesterInfo.examinationCardAcceptance}</Typography>
+                <Typography variant="body2" style={{width: "260px"}}>Record book on time: no</Typography>
             </div>
-            <TableContainer component={Paper} sx={{width: 1000}} style={{marginLeft: "25%", marginTop: "50px"}} >
-                <Table sx={{width: 1000}} aria-label="report table">
+            <TableContainer component={Paper} sx={{width: 800}} style={{margin: "0 auto", marginTop: "50px"}}>
+                <Table sx={{width: 800}} aria-label="report table">
                     <TableHead>
                         <TableRow>
                             <TableCell align="right">Code</TableCell>
