@@ -12,6 +12,7 @@ import LeftNavbar from "./components/LeftNavbar";
 import GeneralPage from "./pages/GeneralPage";
 import CoursesPage from "./pages/CoursesPage";
 import FeesPage from "./pages/FeesPage";
+import RecordsPage from "./pages/RecordsPage";
 
 const theme = createTheme({
     palette: {
@@ -47,13 +48,16 @@ function App() {
               <BrowserRouter>
 
                   <div style={{display: "flex"}}>
-                      <LeftNavbar/>
+                      <div style={{height: "1300px"}}>
+                          <LeftNavbar/>
+                      </div>
                       <Routes>
                           <Route path="/" element={<HomePage/>}/>
                           <Route path="/login" element={<LoginPage/>}/>
                           <Route path="/general" element={<GeneralPage/>}/>
                           <Route path="/courses" element={<CoursesPage/>}/>
                           <Route path="/fees" element={<FeesPage/>}/>
+                          <Route path="/records" element={<RecordsPage/>}/>
 
                       </Routes>
                   </div>
