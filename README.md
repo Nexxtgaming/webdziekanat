@@ -1,6 +1,7 @@
-# Getting Started with Create React App
+# Webdziekanat
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+It is my own improved design of application for students in Technical University of Lodz that contain most imprortant information.
+It is done in react with material UI.
 
 ## Available Scripts
 
